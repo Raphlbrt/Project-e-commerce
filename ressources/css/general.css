@@ -1,0 +1,757 @@
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 5vh;
+    display: flex;
+    align-items: flex-end;
+    z-index: 2;
+}
+nav {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+nav > div {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+nav > div > a {
+    position: relative;
+    display: block;
+    text-align: left;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.active, #menu2 div > .active{
+    color: orange;
+}
+#menu2 a{
+    position: relative;
+    display: block;
+    text-align: left;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav > div > a:hover {
+    text-decoration: underline;
+}
+
+/*  sous menu */
+.submenu {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    display: none;
+    width: 150%;
+    border-radius: 10px;
+}
+
+.submenu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.submenu > div {
+    justify-content: center;
+}
+
+nav > div:hover .submenu {
+    display: block;
+}
+#menu2 > div:hover .submenu {
+    display: block;
+}
+
+/* Sous sous menu */
+.subsubmenu {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    display: none;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.subsubmenu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.subsubmenu > div {
+    display: flex;
+}
+
+nav > div div div:hover .subsubmenu {
+    display: block;
+}
+#menu2 > div div div:hover .subsubmenu {
+    display: block;
+}
+
+/* Tout le responsive */
+.burger {
+    display: none;
+}
+
+
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/input-add-ons/ */
+.InputAddOn {
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+.InputAddOn-field {
+    flex: 1;
+}
+.InputAddOn-field:not(:first-child) {
+    border-left: 0;
+}
+.InputAddOn-field:not(:last-child) {
+    border-right: 0;
+}
+
+.InputAddOn-item {
+    background-color: rgba(147, 128, 108, 0.1);
+    color: #666666;
+    font: inherit;
+    font-weight: normal;
+}
+
+.InputAddOn-field,
+.InputAddOn-item {
+    border: 1px solid rgba(147, 128, 108, 0.25);
+    padding: 0.5em 0.75em;
+}
+.InputAddOn-field:first-child,
+.InputAddOn-item:first-child {
+    border-radius: 2px 0 0 2px;
+}
+.InputAddOn-field:last-child,
+.InputAddOn-item:last-child {
+    border-radius: 0 2px 2px 0;
+}
+/* ============================================
+   Thème CSS pour un magasin des suicides
+   Palette de couleurs : Dark / Blanc / Rouge
+   ============================================ */
+
+/* --- Réinitialisation des styles par défaut --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Corps de la page --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Fond sombre */
+    color: #f5f5f5; /* Texte blanc cassé */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+form{
+    margin : auto;
+    align-items: center;
+    width: 80vh;
+}
+
+/* --- Conteneur principal --- */
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: #252525; /* Fond légèrement plus clair */
+    border: 1px solid #900000; /* Bordure rouge sombre */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+    margin : auto;
+}
+
+/* --- Titre principal --- */
+h1, h2, h3 {
+    color: #ff4d4d; /* Rouge vif pour les titres */
+    margin: 2vw;
+    text-align: center;
+}
+#artAcc::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgba(26, 26, 26, 1), rgba(255,255,255,0));
+}
+main > article#artAcc {
+    margin: 0 !important; /* Annule le margin hérité de main */
+    width: 100% !important; /* Priorise la largeur complète */
+    height: 100vh !important; /* Occupe toute la hauteur de la vue */
+    background-image: url("../img/img_accueil.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #artAcc {
+    background-image: url("../img/img_accueil.jpg");
+    margin: 0 !important;
+    width: 100% !important;
+}
+.titreImage {
+    color: white;
+    position: relative;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    justify-content: center;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+/* --- Paragraphe et texte --- */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* --- Formulaire --- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Labels --- */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #f5f5f5;
+}
+
+/* --- Champs d'entrée --- */
+input,
+textarea,
+select,
+fieldset{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #900000; /* Bordure rouge sombre */
+    background-color: #333; /* Fond sombre */
+    color: #f5f5f5; /* Texte blanc cassé */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #ff4d4d; /* Rouge vif pour focus */
+    background-color: #444; /* Fond légèrement plus clair */
+}
+
+/* --- Boutons --- */
+button {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Texte blanc */
+    background-color: #ff4d4d; /* Rouge vif */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin : 20px;
+}
+
+button:hover {
+    background-color: #b30000; /* Rouge sombre */
+}
+/* --- Image --- */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius : 30px;
+
+}
+
+/* --- Article dans liste --- */
+.produitInfo {
+    padding: 0 5px 0 10px;
+    text-decoration: none;
+    color: white;
+}
+.corpArticle {
+    padding: 10px;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.corpArticle > * {align-content: center;}
+.imageArticle {
+    max-width: 40%;
+    padding: 5%;
+    max-height: 40%;
+}
+.contenuArticle {
+    max-width: 50%;
+    max-height: 100%;
+
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.sort_form {
+    max-width: 50%;
+    margin: initial;
+    width: auto;
+    min-height: auto;
+}
+
+.columnFilter {
+    float: left;
+    width: 23%;
+    padding: 10px;
+}
+
+.categories div {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.categories input {
+    width: 15%;
+}
+
+.categories button {
+    width: 85%;
+}
+
+.categories form {
+    width: 100%;
+    align-items: start;
+}
+
+/* --- Article dans détail --- */
+.en_tete {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+.imageDetail {
+    max-width: 50%;
+    padding: 2.5%;
+}
+.titreDetail{
+    max-width: 40%;
+    padding: 2.5%;
+    justify-content: space-between;
+}
+footer {
+    background-color: #900000;
+    color: #f5f5f5;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+#BoutonPannier{
+    min-height: 0px;
+    width: 100%;
+}
+.panier {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.panier-item-image img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.panier-item-details {
+    flex-grow: 1;
+}
+.panier-item {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+.contenuArticle > p{
+    margin-bottom: 2px;
+}
+.produit-link {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+}
+.produit-item {
+    margin-bottom: 20px;
+    border: 1px solid #900000; /* Bordure rouge */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #252525; /* Fond sombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageArticle img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Supprimez les changements de padding */
+}
+
+.imageArticle img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Ajout d'un effet d'ombre sans modifier les dimensions */
+}
+/* Style général pour la carte */
+.card {
+    width: 500px;
+    height: 80px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+/* Style spécifique pour la vague */
+.wave {
+    position: absolute;
+    transform: rotate(90deg);
+    left: -31px;
+    top: 32px;
+    width: 80px;
+}
+
+/* Styles spécifiques pour les messages de succès */
+.card.success .wave {
+    fill: #04e4003a;
+}
+.card.success .icon-container {
+    background-color: #04e40048;
+}
+.card.success .icon {
+    color: #269b24;
+}
+.card.success .message-text {
+    color: #269b24;
+}
+
+/* Styles spécifiques pour les messages d'erreur */
+.card.erreur .wave {
+    fill: #fc0c0c3a;
+}
+.card.erreur .icon-container {
+    background-color: #fc0c0c48;
+}
+.card.erreur .icon {
+    color: #d10d0d;
+}
+.card.erreur .message-text {
+    color: #d10d0d;
+}
+#messages-flash{
+    position: fixed;
+}
+/* Style pour le conteneur de l'icône */
+.icon-container {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+/* Style pour l'icône */
+.icon {
+    width: 17px;
+    height: 17px;
+}
+
+/* Conteneur du texte */
+.message-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+/* Style pour les textes */
+.message-text,
+.sub-text {
+    margin: 0;
+    cursor: default;
+}
+.message-text {
+    font-size: 17px;
+    font-weight: 700;
+}
+.sub-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Icône de fermeture */
+.cross-icon {
+    width: 18px;
+    height: 18px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* --- Responsivité --- */
+
+/* Adaptation pour les petits écrans */
+
+@media screen and (min-width: 900px) {
+    .submenu{
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@media (max-width: 900px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    #menu2 {
+        display: none;
+        width: 75%;
+        background: #ff4d4d;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        bottom: 0;
+        position: fixed;
+        transition: all 0.2s;
+    }
+    #menu2 h2{
+        color: #333333;
+    }
+    #menu2 > div:first-child{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu2 div:first-child > h2{
+        width: 75%;
+    }
+    .burger {
+        display: block;
+        top: 10px;
+        left: 10px;
+        position: fixed;
+        z-index: 1;
+        transition: all 0.2s;
+    }
+
+    .submenu{
+        width:60%;
+        right: 0px;
+        margin: 5%;
+        border: 0.2rem solid;
+        border-color: #ffffff;
+    }
+    .AdminHead {
+        display: flex;
+        justify-content:flex-start;
+        color: white;
+        flex-direction: row;
+    }
+
+    .AdminHead svg {
+        transition: transform 0.25s ease-out;
+        fill: white;
+    }
+
+    .AdminBody {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.15s ease-out;
+    }
+
+    .AdminContainer.open>.AdminBody {
+        max-height: 1000px;
+        transition: max-height 0.25s ease-in;
+        overflow: auto;
+    }
+
+    .AdminContainer.open>.AdminHead svg {
+        transform: rotate(180deg);
+        transition: transform 0.15s ease-in;
+    }
+    .AdminContainer.open > .AdminBody > .AdminContainer > .AdminHead{
+        flex-direction: column;
+        align-items: start;
+        margin-left: 5%;
+    }
+    .AdminContainer > .AdminBody > .AdminContainer > .AdminHead{
+        flex-direction: column;
+        align-items: start;
+        margin-left: 5%;
+    }
+    .AdminHead:first-child > div:nth-child(2){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .panier-item{
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #menu2{
+        width: 100%;
+    }
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2, h3 {
+        font-size: 20px;
+    }
+
+    input, textarea, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+}
+
+.panier-item-details form {
+    display: inline;
+}
+
+.panier-total {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+}
+/* --- Détails du client --- */
+.client-details {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #252525; /* Fond sombre */
+    border: 1px solid #900000; /* Bordure rouge */
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.client-details p {
+    font-size: 1.1rem;
+    color: #f5f5f5;
+}
+
+.client-details strong {
+    color: #ff4d4d; /* Rouge vif pour les titres */
+}
+
+/* --- Actions du client --- */
+.client-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.client-actions .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff4d4d; /* Rouge vif */
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.client-actions .button:hover {
+    background-color: #b30000; /* Rouge sombre */
+}
+
+.client-actions .button-secondary {
+    background-color: #666; /* Bouton gris secondaire */
+}
+
+.client-actions .button-secondary:hover {
+    background-color: #444; /* Gris sombre */
+}
+
+h4 {
+    font-size: 25px;
+}
